@@ -1,7 +1,6 @@
 <template>
   <Layout>
     <div class="container has-text-centered page-heading">
-      <PostTags :post="$page.single"/>
       <p class="title is-4 is-hidden-mobile">
         {{ $page.single.title }}
       </p>

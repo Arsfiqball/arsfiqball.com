@@ -5,8 +5,8 @@ module.exports = {
 
   templates: {
     Single: '/:name',
-    Post: '/post/:title',
-    Tag: '/tag/:id'
+    Post: '/post--:title',
+    Tag: '/tag--:id'
   },
 
   plugins: [

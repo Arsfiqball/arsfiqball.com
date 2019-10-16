@@ -2,15 +2,15 @@
   <Layout>
     <div class="container has-text-centered post-heading">
       <PostTags :post="$page.post"/>
-      <p class="title is-4 is-hidden-mobile">
+      <div class="title is-4 is-hidden-mobile">
         {{ $page.post.title }}
-      </p>
-      <p class="title is-5 is-hidden-tablet">
+      </div>
+      <div class="title is-5 is-hidden-tablet">
         {{ $page.post.title }}
-      </p>
-      <p class="subtitle is-6">
+      </div>
+      <div class="subtitle is-6">
         <PostMeta :post="$page.post" />
-      </p>
+      </div>
     </div>
 
     <div class="divider"></div>

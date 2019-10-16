@@ -5,9 +5,9 @@
     </p>
     <div v-for="(edge, i) in posts" :key="edge.node.id">
       <g-link class="post-link" :to="edge.node.path">
-        <div class="is-hidden-mobile numbering">
+        <span class="is-hidden-mobile numbering">
           {{i + 1}}
-        </div>
+        </span>
         <span class="post-link-title">
           <span class="has-text-link" v-for="tag in edge.node.tags" :key="tag.id" :to="tag.path">
             #{{ tag.title }}
