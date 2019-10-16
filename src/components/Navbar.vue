@@ -5,13 +5,13 @@
         <g-link to="/" class="navbar-item">
           <img src="../icon.jpg">
         </g-link>
-        <g-link to="/about" class="navbar-item">
+        <g-link to="/about" active-class="is-active" class="navbar-item">
           Me
         </g-link>
-        <g-link to="/posts" class="navbar-item">
+        <g-link to="/posts" active-class="is-active" class="navbar-item">
           Posts
         </g-link>
-        <g-link to="/contact" class="navbar-item">
+        <g-link to="/contact" active-class="is-active" class="navbar-item">
           Contact
         </g-link>
 
@@ -65,6 +65,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.navbar {
+  .navbar-item {
+    outline: none;
+  }
+}
 .is-not-top {
   box-shadow: 0 0 20px 5px rgba(#000, .05);
   transition: 1s ease;
