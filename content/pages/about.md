@@ -4,6 +4,8 @@ title: About Me
 description: Profile, Bio and Portfolio
 ---
 
+<img style="width: 120px; margin: 0 0 1rem 1rem; border-radius: 60px;" class="is-pulled-right" src="/me.jpg"/>
+
 Hi, my name is <u>Iqbal Mohammad Abdul Ghoni</u>.
 I’m a tech enthusiast. I love IT and Robotics engineering. I taught myself
 programming since I was 14 and choose to register as electrical engineering
