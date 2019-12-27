@@ -19,7 +19,7 @@ cover_image: ./images/mamangkot-cover-laporan.png
 * Aplikasi [Mamangkot-supir.apk](https://drive.google.com/file/d/1uXOXxopa7BZ65ZLSVUvQBD4PKQVtnvEh/view)
 * Aplikasi [Mamangkot-penumpang.apk](https://drive.google.com/file/d/1chnQn3Eo9OUFA4FvprTc9Mdgt2jIkXgp/view)
 * Kode sumber lengkap [Mamangkot di GitHub](https://github.com/Arsfiqball/mamangkot)
-* Softcopy [Laporan](/)
+* Softcopy [Laporan](https://drive.google.com/open?id=1r47ongqptDglFHCgNwSga-FJISV1yEBp)
 
 ---
 
