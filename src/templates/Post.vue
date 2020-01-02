@@ -30,6 +30,17 @@
     </div>
     <div class="divider"></div>
     <div class="spacer"></div>
+
+    <div class="container post-content">
+      <vue-disqus
+        shortname="arsfiqball-github-blog"
+        :title="$page.post.title"
+        :url="'https://arsfiqball.com' + $url($page.post.path)"
+        :identifier="$page.post.path"
+      />
+    </div>
+
+    <div class="spacer"></div>
   </Layout>
 </template>
 

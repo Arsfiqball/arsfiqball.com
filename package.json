@@ -8,12 +8,15 @@
   },
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.0",
+    "@gridsome/plugin-sitemap": "^0.2.3",
     "@gridsome/source-filesystem": "^0.6.0",
     "@gridsome/transformer-remark": "^0.3.0",
     "bulma": "^0.7.5",
     "crypto-js": "^3.1.9-1",
-    "gridsome": "^0.7.0",
-    "gridsome-plugin-remark-shiki": "^0.3.0"
+    "gridsome": "^0.7.12",
+    "gridsome-plugin-feed": "^1.0.2",
+    "gridsome-plugin-remark-shiki": "^0.3.0",
+    "vue-disqus": "^3.0.5"
   },
   "devDependencies": {
     "node-sass": "^4.12.0",
