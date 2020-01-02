@@ -20,6 +20,11 @@ export default function (Vue, { router, head, isClient }) {
     content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
   })
 
+  head.meta.push({
+    name: 'google-site-verification',
+    content: '5FnMv4IngWLUBgouT4QaaHRm555_kamiMF2MuwCBUDo'
+  })
+
   head.link.push({
     rel: 'alternate',
     title: 'RSS',
