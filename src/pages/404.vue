@@ -1,21 +1,30 @@
 <template>
-  <Layout>
+  <Layout :show-logo="false">
     <div class="container has-text-centered page-heading">
       <p class="title is-4 is-hidden-mobile">
-        {{ $page.single.title }}
+        Page not found
       </p>
       <p class="title is-5 is-hidden-tablet">
-        {{ $page.single.title }}
+        Page not found
       </p>
       <p class="subtitle is-6">
-        {{ $page.single.description }}
+        Error 404
       </p>
     </div>
 
     <div class="divider"></div>
 
     <div class="container page-content">
-      <div class="content" v-html="transform($page.single.content)" />
+      <div class="content">
+        Sorry, but the page you're looking for is not here anymore or maybe the
+        link is broken. Please <g-link to="/contact">contact me</g-link> if you
+        are pretty sure that previously this page had something here and not
+        deleted on purpose. I will check it soon. Thank you :)
+        <br>
+        <br>
+        Check out my <g-link to="/contact">recent posts here</g-link>. Hope
+        you'll find another satisfying content. Cheers... :D
+      </div>
     </div>
 
     <div class="spacer"></div>
@@ -24,39 +33,11 @@
 
 <script>
 export default {
-  components: {
-  },
-
-  metaInfo () {
-    return {
-      title: this.$page.single.title,
-      meta: [{
-        name: 'description',
-        content: this.$page.single.description
-      }]
-    }
-  },
-
-  methods: {
-    transform (html) {
-      return html
-        .replace('<table>', '<div class="table-container"><table>')
-        .replace('</table>', '</table></div>')
-    }
+  metaInfo: {
+    title: 'Page not found'
   }
 }
 </script>
-
-<page-query>
-query Single ($id: ID!) {
-  single (id: $id) {
-    title
-    path
-    description
-    content
-  }
-}
-</page-query>
 
 <style lang="scss" scoped>
 .page-heading {
@@ -81,9 +62,5 @@ query Single ($id: ID!) {
 .spacer {
   display: block;
   margin-bottom: 3rem;
-}
-
-pre {
-  border-radius: 6px;
 }
 </style>

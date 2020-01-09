@@ -1,7 +1,6 @@
 module.exports = {
   siteUrl: 'http://arsfiqball.com/',
   siteName: 'Arsfiqball',
-  siteDescription: 'Personal website of Iqbal Mohammad Abdul Ghoni. Software & electronics engineer, graphic designer and JS fanboy.',
   icon: './src/icon.jpg',
 
   templates: {

@@ -61,7 +61,14 @@ export default {
     PostList
   },
   metaInfo: {
-    title: 'Iqbal Mohammad Abdul Ghoni'
+    title: 'Iqbal Mohammad Abdul Ghoni',
+    meta: [{
+      name: 'description',
+      content: `I'm a tech enthusiast. I love IT and Robotics engineering. ` +
+               `I currently study Electrical Engineering degree at ` +
+               `University of Sultan Ageng Tirtayasa. I'm also available for ` +
+               `freelance Software Engineering job`
+    }]
   }
 }
 </script>

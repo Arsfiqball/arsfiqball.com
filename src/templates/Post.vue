@@ -55,14 +55,28 @@ export default {
   },
 
   metaInfo () {
+    const meta = []
+
+    if (this.$page.post.excerpt) {
+      meta.push({
+        name: 'description',
+        content: this.$page.post.excerpt
+      })
+    } else {
+      meta.push({
+        name: 'description',
+        content: this
+          .$page
+          .post
+          .content
+          .replace(/(<([^>]+)>)/gi, "")
+          .slice(0, 360)
+      })
+    }
+
     return {
       title: this.$page.post.title,
-      meta: [
-        {
-          name: 'description',
-          content: this.$page.post.excerpt
-        }
-      ]
+      meta
     }
   },
 
@@ -89,6 +103,7 @@ query Post ($id: ID!) {
       path
     }
     content
+    excerpt
     cover_image (width: 860, blur: 10)
   }
 }
