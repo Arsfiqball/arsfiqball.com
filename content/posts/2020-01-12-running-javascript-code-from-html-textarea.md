@@ -1,6 +1,6 @@
 ---
 title: Running JavaScript Code from HTML Textarea
-date: 2020-01-12
+date: 2020-01-12 10:00:00
 tags: ['Programming']
 ---
 
