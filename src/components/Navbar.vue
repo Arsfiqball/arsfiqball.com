@@ -24,7 +24,7 @@
 
       <div :class="['navbar-menu', isActive ? 'is-active' : null]">
         <div class="navbar-start">
-          <a href="https://drive.google.com/open?id=14q_MYyhhMhzMy7qDIN-IV9WCHKO3cSFb" target="_blank" class="navbar-item">
+          <a href="https://drive.google.com/open?id=1nqpkOEULDUl5n6iNoW6szJjjCkOJYej-" target="_blank" class="navbar-item">
             Download CV
           </a>
         </div>
