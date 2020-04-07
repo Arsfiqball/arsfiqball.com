@@ -5,6 +5,7 @@ module.exports = {
 
   templates: {
     Single: '/:name',
+    Portfolio: '/portfolio--:name',
     Post: '/post--:title',
     Tag: '/tag--:id'
   },
@@ -28,6 +29,13 @@ module.exports = {
       options: {
         typeName: 'Single',
         path: 'content/pages/*.md'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Portfolio',
+        path: 'content/portfolios/*.md'
       }
     },
     {
