@@ -14,7 +14,7 @@ for my surroundings through my awesome innovation.
 
 #### Competitive Achievements
 
-| Year | School                                                        |
+| Year | Competition                                                   |
 | ---- | ------------------------------------------------------------- |
 | 2019 | Top 5 Regional II in Indonesia Firefighting Robot Contest     |
 | 2017 | Proper Application of Technology Competition for Cilegon City |
@@ -32,23 +32,10 @@ for my surroundings through my awesome innovation.
 | 2010  | 2013   | SMPN 1 Gegesik, Cirebon (Middle School)                    |
 | 2004  | 2010   | SDN 2 Gegesik Kidul, Cirebon (Elementary School)           |
 
-#### Featured Projects
-
-* Tirtapods-x, legged firefighting robot for National Robotic Contest 2019.
-* This personal website. 🔥
-* Hexo Theme Best Friend, Swig and Scss based theme for Hexo bloging engine.
-* Website of Electrical Engineering Student Association www.hmeftuntirta.com
-
 #### Experiences
 
-* [now] Software Engineer at Elings IT Solution.
-* Leader of Untirta Robotic Team for National Robotic Contest preparation and performance.
-* Network Engineer Internship at Krakatau Steel.
-* Chairman of Information Department at Electrical Engineering Student Association. 🌟
-
-#### Expertise
-
-* Ability to understand JavaScript from MDN and find its best practice in Stackoverflow.
-* Control emotion and prevent it from stress because engineer needs brain to solve problems.
-* 🚀 Can keep learning while complaining about new framework that comes out everyday.
-* Get shit done first, release date is the most important.
+* Software Engineer for Survey Project at PT. Armudi Pradana Konsultan, Freelance, 1-time project [Nov - Des 2019]
+* Leader of Untirta's Robotics Team for National Robotic Contest preparation & performance [Jan - May 2019]
+* Network Engineer, EDPC at PT. Krakatau Steel (Tbk), Internship [Jan - Feb 2019]
+* Chairman of Information Department at Electrical Engineering Student Association [2018]
+* Staff of Information Department at Electrical Engineering Student Association [2017]

@@ -13,9 +13,7 @@
             <p class="is-size-6">
               I'm a tech enthusiast. I love IT and Robotics engineering.
               I currently study Electrical Engineering degree at University of Sultan Ageng Tirtayasa.
-              I'm also available for freelance Software Engineering job at
-              <a target="_blank" href="https://www.upwork.com/o/profiles/users/_~01fdd1ed86c93a1be5/">Upwork</a>.
-              Want to know more about me? Just <g-link to="/about">click here</g-link> 😉
+              Want to know more about me? <g-link to="/about">Click here!</g-link>
             </p>
           </div>
           <div class="column is-5">
