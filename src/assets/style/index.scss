@@ -50,3 +50,18 @@ pre {
   border-radius: 6px;
 }
 
+.anchor-link {
+  display: none;
+}
+
+.post-content .content {
+  ul {
+    margin-bottom: .7rem;
+  }
+
+  li {
+    p {
+      margin-bottom: 0px;
+    }
+  }
+}
