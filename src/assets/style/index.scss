@@ -46,8 +46,12 @@ $red: #e84118;
   line-height: 1.5;
 }
 
-pre {
-  border-radius: 6px;
+.content pre, pre {
+  border-radius: 3px;
+  padding: .5rem .8rem;
+  margin: .5em 0;
+  border: 1px solid #dcdde1;
+  scrollbar-width: thin;
 }
 
 .anchor-link {
