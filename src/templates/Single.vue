@@ -1,12 +1,8 @@
 <template>
   <Layout>
     <div class="container has-text-centered page-heading">
-      <p class="title is-4 is-hidden-mobile">
-        {{ $page.single.title }}
-      </p>
-      <p class="title is-5 is-hidden-tablet">
-        {{ $page.single.title }}
-      </p>
+      <div class="title is-4 is-hidden-mobile" v-html="renderEmoji($page.single.title)" />
+      <div class="title is-5 is-hidden-tablet" v-html="renderEmoji($page.single.title)" />
       <p class="subtitle is-6">
         {{ $page.single.description }}
       </p>
@@ -23,6 +19,8 @@
 </template>
 
 <script>
+import { renderEmoji } from '~/helper'
+
 export default {
   components: {
   },
@@ -38,8 +36,10 @@ export default {
   },
 
   methods: {
+    renderEmoji,
+
     transform (html) {
-      return html
+      return renderEmoji(html)
         .replace('<table>', '<div class="table-container"><table>')
         .replace('</table>', '</table></div>')
     }

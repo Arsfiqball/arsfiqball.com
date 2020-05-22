@@ -2,12 +2,8 @@
   <Layout>
     <div class="container has-text-centered post-heading">
       <PostTags :post="$page.post"/>
-      <div class="title is-4 is-hidden-mobile">
-        {{ $page.post.title }}
-      </div>
-      <div class="title is-5 is-hidden-tablet">
-        {{ $page.post.title }}
-      </div>
+      <div class="title is-4 is-hidden-mobile" v-html="renderEmoji($page.post.title)" />
+      <div class="title is-5 is-hidden-tablet" v-html="renderEmoji($page.post.title)" />
       <div class="subtitle is-6">
         <PostMeta :post="$page.post" />
       </div>
@@ -47,6 +43,7 @@
 <script>
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
+import { renderEmoji } from '~/helper'
 
 export default {
   components: {
@@ -81,8 +78,10 @@ export default {
   },
 
   methods: {
+    renderEmoji,
+
     transform (html) {
-      return html
+      return renderEmoji(html)
         .replace('<table>', '<div class="table-container"><table>')
         .replace('</table>', '</table></div>')
     }

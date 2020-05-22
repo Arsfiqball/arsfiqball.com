@@ -12,12 +12,10 @@
           <span class="has-text-link" v-for="tag in edge.node.tags" :key="tag.id" :to="tag.path">
             #{{ tag.title }}
           </span>
-          <span v-if="edge.node.tags">
-            : {{ edge.node.title }}
-          </span>
+          <span v-if="edge.node.tags" v-html="':' + renderEmoji(edge.node.title)" />
           <span v-else>
             <span class="has-text-link is-hidden-tablet">#{{i + 1}}</span>
-            {{ edge.node.title }}
+            <span v-html="renderEmoji(edge.node.title)" />
           </span>
         </span>
         <span class="post-link-date is-hidden-mobile">
@@ -29,8 +27,13 @@
 </template>
 
 <script>
+import { renderEmoji } from '~/helper'
+
 export default {
-  props: ['title', 'posts']
+  props: ['title', 'posts'],
+  methods: {
+    renderEmoji
+  }
 }
 </script>
 
