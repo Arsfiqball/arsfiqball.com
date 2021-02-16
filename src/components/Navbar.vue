@@ -3,7 +3,9 @@
     <div class="container">
       <div class="navbar-brand">
         <g-link to="/" class="navbar-item">
-          <img src="../icon.jpg">
+          <span style="display: inline-block; line-height: 1; padding: 2px 2px; border-radius: 8px; background: white;">
+            <img src="../icon.jpg" style="display: block;">
+          </span>
         </g-link>
         <g-link to="/about" active-class="is-active" class="navbar-item">
           Me
@@ -14,6 +16,9 @@
         <g-link to="/contact" active-class="is-active" class="navbar-item">
           Contact
         </g-link>
+        <a class="navbar-item is-hidden-tablet" @click="$emit('toggle-dark-mode', isDarkMode)">
+          {{ isDarkMode ? '🌙' : '☀️' }}
+        </a>
 
         <a role="button" @click="isActive = !isActive" :class="['navbar-burger burger', isActive ? 'is-active' : null]" aria-label="menu">
           <span aria-hidden="true"></span>
@@ -26,6 +31,9 @@
         <div class="navbar-start">
           <a href="https://drive.google.com/open?id=1nqpkOEULDUl5n6iNoW6szJjjCkOJYej-" target="_blank" class="navbar-item">
             Download CV
+          </a>
+          <a class="navbar-item is-hidden-mobile" @click="$emit('toggle-dark-mode', isDarkMode)">
+            {{ isDarkMode ? '🌙' : '☀️' }}
           </a>
         </div>
         <div class="navbar-end">
@@ -54,7 +62,7 @@ query {
 
 <script>
 export default {
-  props: ['isTop'],
+  props: ['isTop', 'isDarkMode'],
 
   data () {
     return {

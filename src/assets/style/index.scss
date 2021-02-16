@@ -6,12 +6,34 @@
 $widescreen-enabled: false;
 $family-sans-serif: 'Josefin Sans', sans-serif;
 $body-size: $size-6;
-$text: $black-bis;
-$text-light: $black-ter;
-$text-strong: $black;
-$code: $black-ter;
-$pre: $white;
-$pre-background: $black-ter;
+$text: var(--text-color);
+$text-invert: var(--text-color-invert);
+$text-light: var(--text-color-light);
+$text-strong: var(--text-color-strong);
+$title-color: var(--title-color);
+$subtitle-color: var(--subtitle-color);
+$navbar-background-color: var(--background-color, $white);
+$navbar-item-color: var(--text-color, $black-ter);
+$navbar-item-hover-background-color: var(--background-color, $white-bis);
+$navbar-item-active-color: var(--text-color, $black);
+$navbar-dropdown-background-color: var(--background-color, $white-bis);
+$navbar-dropdown-item-hover-color: var(--text-color, $black-ter);
+$navbar-dropdown-item-hover-background-color: var(--background-color, $white-bis);
+$navbar-dropdown-item-active-background-color: var(--background-color, $white-bis);
+$button-color: var(--text-color, $black);
+$button-background-color: var(--background-color-lighter, $white-bis);
+$button-border-color: var(--background-color-lighter, $white-bis);
+$link-hover: var(--text-color, $black);
+$hr-background-color: var(--background-color-lighter);
+
+$code: var(--text-color);
+$code-background: var(--background-color-lighter);
+$table-color: var(--text-color);
+$table-cell-border: 1px solid var(--background-color-grey);
+$table-background-color: var(--background-color, $white);
+$table-row-hover-background-color: var(--background-color-lighter, $white);
+$table-striped-row-even-background-color: var(--background-color-lighter, $white);
+$table-striped-row-even-hover-background-color: var(--background-color, $white);
 
 $blue: #00a8ff;
 $yellow: #fbc531;
@@ -20,8 +42,46 @@ $red: #e84118;
 
 @import "~bulma/bulma";
 
+:root {
+  --text-color: #{$black-bis};
+  --text-color-invert: #{findColorInvert($black-bis)};
+  --text-color-light: #{$black-ter};
+  --text-color-strong: #{$black};
+  --title-color: #{$grey-darker};
+  --subtitle-color: #{$grey-dark};
+  --background-color: #{$white};
+  --background-color-lighter: #{$white-ter};
+  --background-color-grey: #{$grey-lighter};
+}
+
+.dark-mode {
+  --text-color: #{$white-bis};
+  --text-color-invert: #{findColorInvert($white-bis)};
+  --text-color-light: #{$white-ter};
+  --text-color-strong: #{$white};
+  --title-color: #{findColorInvert($grey-darker)};
+  --subtitle-color: #{findColorInvert($grey-dark)};
+  --background-color: #{$black};
+  --background-color-lighter: #{$black-ter};
+  --background-color-grey: #{$grey-darker};
+
+  --post-link-border-left-color: #{$black};
+  --post-link-border-left-color-hover: #{findColorInvert(#192a56)};
+  --post-link-background-color-hover: #{findColorInvert(#dcdde1)};
+  --post-link-date-text-color: #{findColorInvert(#7f8fa6)};
+}
+
+#app {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
 .has-navbar-fixed-top {
   margin-top: $navbar-height;
+}
+
+.tag.is-default {
+  background-color: var(--background-color-lighter);
 }
 
 .pager {
@@ -50,7 +110,6 @@ $red: #e84118;
   border-radius: 3px;
   padding: .5rem .8rem;
   margin: .5em 0;
-  border: 1px solid #dcdde1;
   scrollbar-width: thin;
 }
 

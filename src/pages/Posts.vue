@@ -6,7 +6,7 @@
           <g-link to="/posts" class="tag is-link">
             All
           </g-link>
-          <g-link class="tag" v-for="edge in $static.tags.edges" :to="edge.node.path" :key="edge.node.id">
+          <g-link class="tag is-default" v-for="edge in $static.tags.edges" :to="edge.node.path" :key="edge.node.id">
             {{edge.node.title}}
           </g-link>
         </div>

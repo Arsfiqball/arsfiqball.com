@@ -27,7 +27,7 @@
     <div class="divider"></div>
     <div class="spacer"></div>
 
-    <div class="container post-content">
+    <div class="container post-comment">
       <vue-disqus
         shortname="arsfiqball-github-blog"
         :title="$page.post.title"
@@ -118,6 +118,13 @@ query Post ($id: ID!) {
   padding: 0 1.5rem;
 }
 
+.post-comment {
+  max-width: 746px;
+  padding: 1.5rem 1.5rem;
+  border-radius: 1.5rem;
+  background-color: var(--background-color-lighter, transparent);
+}
+
 .cover-image {
   width: 100%;
   max-width: 746px;
@@ -139,7 +146,7 @@ query Post ($id: ID!) {
   display: block;
   width: 100px;
   height: 4px;
-  background: #222;
+  background: var(--subtitle-color, #222);
   line-height: 1;
   margin: 1.5rem auto;
   border-radius: 2px;

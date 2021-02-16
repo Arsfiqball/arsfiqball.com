@@ -47,13 +47,12 @@ export default {
   align-items: center;
   padding: .5rem 1rem;
   margin: 0 -1rem;
-  color: #000;
-  border-left: 2px solid #fff;
+  color: var(--text-color, #000);
+  border-left: 2px solid var(--post-link-border-left-color, #fff);
 
   &:hover {
-    color: #000;
-    background: #dcdde1;
-    border-left: 2px solid #192a56;
+    background: var(--post-link-background-color-hover, #dcdde1);
+    border-left: 2px solid var(--post-link-border-left-color-hover, #192a56);
   }
 
   .numbering {
@@ -76,7 +75,7 @@ export default {
   .post-link-date {
     flex-grow: 1;
     text-align: right;
-    color: #7f8fa6;
+    color: var(--post-link-date-text-color, #7f8fa6);
   }
 }
 </style>

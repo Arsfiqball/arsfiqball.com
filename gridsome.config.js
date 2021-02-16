@@ -88,7 +88,7 @@ module.exports = {
     remark: {
       autolinkClassName: 'anchor-link',
       plugins: [
-        [ 'gridsome-plugin-remark-shiki', { theme: 'light_vs', skipInline: true } ],
+        [ 'gridsome-plugin-remark-shiki', { theme: 'dark_vs', skipInline: true } ],
         [ 'remark-toc', {} ]
       ]
     }

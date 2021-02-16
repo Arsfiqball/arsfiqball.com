@@ -3,10 +3,10 @@
     <div class="section">
       <div class="container">
         <div class="tags">
-          <g-link to="/posts" class="tag">
+          <g-link to="/posts" class="tag is-default">
             All
           </g-link>
-          <g-link v-for="edge in $static.tags.edges" :class="['tag', edge.node.title === $page.tag.title ? 'is-link' : null]" :to="edge.node.path" :key="edge.node.id">
+          <g-link v-for="edge in $static.tags.edges" :class="['tag', edge.node.title === $page.tag.title ? 'is-link' : 'is-default']" :to="edge.node.path" :key="edge.node.id">
             {{edge.node.title}}
           </g-link>
         </div>
