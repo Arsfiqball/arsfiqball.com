@@ -82,8 +82,8 @@ export default {
 
     transform (html) {
       return renderEmoji(html)
-        .replace('<table>', '<div class="table-container"><table>')
-        .replace('</table>', '</table></div>')
+        .replace(/<table>/g, '<div class="table-container"><table>')
+        .replace(/<\/table>/g, '</table></div>')
     }
   }
 }

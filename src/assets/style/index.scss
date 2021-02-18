@@ -35,6 +35,9 @@ $table-row-hover-background-color: var(--background-color-lighter, $white);
 $table-striped-row-even-background-color: var(--background-color-lighter, $white);
 $table-striped-row-even-hover-background-color: var(--background-color, $white);
 
+$content-blockquote-background-color: var(--background-color-lighter, $white-ter);
+$content-blockquote-border-left: 5px solid var(--background-color-grey, $grey-lighter);
+
 $blue: #00a8ff;
 $yellow: #fbc531;
 $green: #4cd137;
@@ -74,6 +77,15 @@ $red: #e84118;
 #app {
   background-color: var(--background-color);
   color: var(--text-color);
+  width: 100%;
+  min-height: calc(100vh - #{$navbar-height});
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+html {
+  scrollbar-color: var(--background-color-grey, $white-ter) var(--background-color-lighter, $white);
 }
 
 .has-navbar-fixed-top {
@@ -111,6 +123,13 @@ $red: #e84118;
   padding: .5rem .8rem;
   margin: .5em 0;
   scrollbar-width: thin;
+}
+
+.content img.g-image {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+  display: block;
 }
 
 .anchor-link {

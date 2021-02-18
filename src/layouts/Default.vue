@@ -6,7 +6,9 @@
       <slot/>
     </main>
 
-    <MadeWith />
+    <div>
+      <MadeWith />
+    </div>
   </div>
 </template>
 

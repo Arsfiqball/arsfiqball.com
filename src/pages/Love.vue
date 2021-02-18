@@ -5,21 +5,23 @@
         <div class="title is-5 has-text-centered">
           Guess who she is?
         </div>
-        <div class="field has-addons" style="max-width: 400px; margin: 1rem auto;">
-          <div class="control is-expanded">
-            <input
-              class="input is-borderless is-radiusless is-shadowless"
-              type="text"
-              placeholder="Type her name here"
-              v-model="inputName"
-            />
+        <form @submit.prevent="findout">
+          <div class="field has-addons" style="max-width: 400px; margin: 1rem auto;">
+            <div class="control is-expanded">
+              <input
+                class="input is-borderless is-radiusless is-shadowless"
+                type="text"
+                placeholder="Type her name here"
+                v-model="inputName"
+              />
+            </div>
+            <div class="control">
+              <button type="submit" class="button is-link is-radiusless">
+                Findout
+              </button>
+            </div>
           </div>
-          <div class="control">
-            <a class="button is-link is-radiusless" @click="findout">
-              Findout
-            </a>
-          </div>
-        </div>
+        </form>
         <div class="has-text-centered">
           {{message}}
         </div>
