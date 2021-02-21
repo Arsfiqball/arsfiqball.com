@@ -1,0 +1,145 @@
+- title: Claim-Overtime Application
+  description: >
+    This is a software to facilitate bureaucracy in submitting overtime work plans.
+    It has features to support the making of submissions, reviews, print work order letters and results reports.
+    Using Strapi on the back-end and Vue.js + Bulma CSS on the front-end.
+  image: portfolio-images/sciovertime.png
+  start: 2020-09-10
+  end: 2020-10-19
+  tags:
+    - Web
+    - JavaScript
+  private: true
+- title: Public Facilities, Utilities and Infrastructure Visual
+  description: >
+    A project by local government containing infrastructure, facilities, utilities services data on each real estate.
+    It can visualize Map, Statistics, and Raw Data.
+    The project uses Vue.js (and Leaflet + OSM for Map) on the front-end and Node.js + MySQL on the back-end.
+  image: portfolio-images/psu.png
+  start: 2019-11-02
+  end: 2019-12-26
+  tags:
+    - Web
+    - JavaScript
+  private: true
+- title: HME FT Untirta Official Website
+  description: >
+    Himpunan Mahasiswa Elektro, Fakultas Teknik, Universitas Sultan Ageng Tirtayasa.
+    This website mainly used for publishing news related to HME and organization profile.
+    Made with Hexo (Node.js static site generator) and a custom theme called "electrostatic" made by me.
+  image: portfolio-images/hmeftuntirta.png
+  start: 2018-04-25
+  end: 2019-03-09
+  tags:
+    - Web
+    - JavaScript
+  links:
+    - title: Website
+      url: https://hmeftuntirta.com
+- title: LinkSpider Hexapod C++ Library
+  description: >
+    C++ based inverse kinematics solver and algorithm for static positioning,
+    walking sequence and adaptability of hexapod robot, with support for PWM based servo driver.
+    Research is still working in progress and the simulation can be found in Research 1 & 2 link.
+  image: portfolio-images/linkspider.png
+  start: 2020-11-28
+  end: 2021-01-22
+  tags:
+    - Robot
+    - Embedded System
+    - C++
+  links:
+    - title: Repository
+      url: https://github.com/Arsfiqball/linkspider
+    - title: Research 1
+      url: https://observablehq.com/@arsfiqball/linkspider-single-leg-simulation-for-evaluation
+    - title: Research 2
+      url: https://observablehq.com/@arsfiqball/linkspider-single-posture-simulation-for-evaluation
+- title: Mamangkot App (Student Project)
+  description: >
+    A mobile app for mini bus public transport in Indonesia (angkot).
+    This app shows coordinates of commuting angkot.
+    So the passenger do not need to wait for so long and in appropriate place.
+    Build with Capacitor and Vue.js for the client app.
+    Uses Socket.io on the back-end.
+  image: posts/images/mamangkot-cover-laporan.png
+  start: 2019-12-26
+  end: 2019-12-26
+  tags:
+    - Mobile
+    - JavaScript
+  links:
+    - title: Repository
+      url: https://github.com/Arsfiqball/mamangkot
+    - title: Blog Post
+      url: /post--mamangkot-aplikasi-android-pencari-angkot-tugas-kuliah
+- title: Love You Firaa in OLED 0.96" Display
+  description: >
+    It is a remake of "Love You Firaa" mini game (which was web based) but in microcontroller and OLED 0.96" Display.
+    This project uses NodeMCU v3 (ESP-32) board and programmed with PlatformIO.
+  image: posts/images/demo-luv-u-fir-oled-096.png
+  start: 2020-12-03
+  end: 2020-12-03
+  tags:
+    - Game
+    - Embedded System
+    - C++
+  links:
+    - title: Repository
+      url: https://github.com/Arsfiqball/luv-u-fir-oled-0.96
+    - title: Blog Post
+      url: /post--build-a-mini-game-in-0-96-oled-display-with-node-mcu-and-platform-io
+- title: Hexo Theme Best Friend
+  description: >
+    This is a theme for Hexo based blog, which was fully designed and programmed by me.
+    I was using Swig for templating engine and SCSS to program it with a few help by jQuery and Bulma Framework.
+  image: portfolio-images/hexo-theme-best-friend.png
+  start: 2017-04-23
+  end: 2018-03-31
+  tags:
+    - Web
+    - JavaScript
+  links:
+    - title: Repository
+      url: https://github.com/Arsfiqball/hexo-theme-best-friends
+- title: Love You Firaa
+  description: >
+    A mini HTML5 based game to confess my feeling towards Safnah Nur Safira.
+    This game was built on top of Phaser.io game framework, using JavaScript language and can be played in browser.
+  image: portfolio-images/luv-u-fir.png
+  start: 2017-05-19
+  end: 2017-05-20
+  tags:
+    - Game
+    - Web
+    - JavaScript
+  links:
+    - title: Repository
+      url: https://github.com/Arsfiqball/luv-u-fir
+    - title: Demo
+      url: https://arsfiqball.github.io/luv-u-fir/
+- title: Tirtapods-X Robot
+  description: >
+    A legged firefighting robot which was made for National Robotic Contest 2019.
+    This robot is 100% refactor of the previous version Tirtapods.
+    Tirtapods-X was mostly built by me, Didi Muhadi and Untirta Robotic Club.
+    By our improvements, this robot successfully achieve better result.
+    We were finished at Top 5 while in the previous year, we were 22th.<br><br>
+    Tirtapods-X is using Arduino Mega (chip: Atmega 328) as microcontroller board.
+    I replace all the previous code with mine, re-mapping all the IO, and readjusting the calibration.
+    Even though this board can be programmed with C++, it was still not enough.
+    Then I was using Observable Notebook to accurately calculate each leg movements.
+    So they have far more smooth movement.
+    I also use some excel table to automatically calculate calibration.
+  image: portfolio-images/tirtapods-x.png
+  start: 2018-12-04
+  end: 2019-05-05
+  tags:
+    - Robot
+    - Embedded System
+    - C++
+  links:
+    - title: Repository
+      url: https://github.com/Arsfiqball/tirtapods-x
+    - title: Observable Notebook
+      url: https://observablehq.com/@arsfiqball/tirtapod-leg-simulation-wip

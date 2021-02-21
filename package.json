@@ -16,6 +16,7 @@
     "gridsome": "^0.7.12",
     "gridsome-plugin-feed": "^1.0.2",
     "gridsome-plugin-remark-shiki": "^0.3.0",
+    "js-yaml": "^4.0.0",
     "remark-toc": "^7.0.0",
     "twemoji": "^13.0.0",
     "vue-disqus": "^3.0.5"

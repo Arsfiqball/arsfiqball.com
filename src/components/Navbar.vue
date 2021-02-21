@@ -29,6 +29,9 @@
 
       <div :class="['navbar-menu', isActive ? 'is-active' : null]">
         <div class="navbar-start">
+          <g-link to="/portfolio" active-class="is-active" class="navbar-item">
+            Portfolio
+          </g-link>
           <a href="https://drive.google.com/open?id=1nqpkOEULDUl5n6iNoW6szJjjCkOJYej-" target="_blank" class="navbar-item">
             Download CV
           </a>
