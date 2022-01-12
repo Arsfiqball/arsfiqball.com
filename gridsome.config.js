@@ -1,7 +1,7 @@
 module.exports = {
   siteUrl: 'http://arsfiqball.com/',
   siteName: 'Arsfiqball',
-  icon: './src/icon.jpg',
+  icon: './src/icon.png',
 
   templates: {
     Single: '/:name',

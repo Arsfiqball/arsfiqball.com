@@ -4,7 +4,7 @@
       <div class="navbar-brand">
         <g-link to="/" class="navbar-item">
           <span style="display: inline-block; line-height: 1; padding: 2px 2px; border-radius: 8px; background: white;">
-            <img src="../icon.jpg" style="display: block;">
+            <img src="../icon.png" style="display: block;">
           </span>
         </g-link>
         <g-link to="/about" active-class="is-active" class="navbar-item">
