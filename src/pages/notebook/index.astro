@@ -1,0 +1,52 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import { getCollection } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="has-navbar-fixed-top">
+    <Header />
+    <div class="main-section">
+      <main class="container is-max-desktop main-content">
+        <div class="content">
+          <blockquote>Page Under Development</blockquote>
+        </div>
+
+        <section>
+          {
+            posts.map((post) => (
+              <>
+                <a
+                  href={`/notebook/${post.slug}/`}
+                  style="display: flex; justify-content: space-between; align-items: center; padding: .5rem 0;"
+                >
+                  <span>{post.data.title}</span>
+                  <span style="border-bottom: 1px dashed #ccc; flex-grow: 4; margin: 0 1rem;" />
+                  <span
+                    class="has-text-dark has-text-right"
+                    style="min-width: none; white-space: nowrap;"
+                  >
+                    <FormattedDate date={post.data.pubDate} />
+                  </span>
+                </a>
+              </>
+            ))
+          }
+        </section>
+      </main>
+    </div>
+    <Footer />
+  </body>
+</html>

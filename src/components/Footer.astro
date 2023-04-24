@@ -1,13 +1,23 @@
 ---
 const today = new Date();
+
+import { Icon } from "astro-icon";
 ---
 
 <footer>
-	&copy; {today.getFullYear()} YOUR NAME HERE. All rights reserved.
+  <div class="container is-max-desktop footer-container" style="padding: 1rem;">
+    <a href="/rss.xml" title="RSS Feed" class="is-pulled-right" style="margin-left: 1rem;">
+      <span class="icon">
+        <Icon name="ph:rss" />
+      </span>
+    </a>
+    <a href="/sitemap-index.xml" title="Site Map" class="is-pulled-right" style="margin-left: 1rem;">
+      <span class="icon">
+        <Icon name="ph:folder-open" />
+      </span>
+    </a>
+    <span>
+      &copy; {today.getFullYear()} Iqbal Mohammad Abdul Ghoni. All rights reserved.
+    </span>
+  </div>
 </footer>
-<style>
-	footer {
-		padding: 25px;
-		text-align: center;
-	}
-</style>

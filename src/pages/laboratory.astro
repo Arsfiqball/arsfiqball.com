@@ -1,0 +1,49 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Icon from "astro-icon";
+import { getCollection } from "astro:content";
+
+const projects = (await getCollection("project")).sort(
+  (a, b) => b.data.index - a.data.index
+);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title="Laboratory" description="Laboratory" />
+  </head>
+  <body class="has-navbar-fixed-top">
+    <Header title="Laboratory" />
+    <div class="main-section">
+      <main class="container is-max-desktop main-content">
+        <div class="content">
+          <blockquote>Page Under Development</blockquote>
+        </div>
+
+        <div class="columns is-multiline">
+          {
+            projects.map((project) => (
+              <>
+                <div class="column is-6">
+                  <div class="card">
+                    <div class="card-content">
+                      <a href={project.data.link} target="_blank" class="icon is-pulled-right">
+                        <Icon name="ph:arrow-square-out" />
+                      </a>
+                      <p class="title is-4">{project.data.title}</p>
+                      <p class="subtitle is-7">{project.data.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </>
+            ))
+          }
+        </div>
+      </main>
+    </div>
+    <Footer />
+  </body>
+</html>

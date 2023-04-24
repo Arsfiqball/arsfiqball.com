@@ -1,0 +1,35 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Not found"
+      description="Page you are looking for probably does not exist or no longer here."
+    />
+  </head>
+  <body class="has-navbar-fixed-top">
+    <Header title="Not found" />
+    <div class="main-section">
+      <main class="container is-max-desktop main-content">
+        <div class="is-hidden-mobile" style="height: 10vh;"></div>
+        <div
+          class="content has-text-centered"
+          style="margin: auto; max-width: 640px;"
+        >
+          <h1>Not Found</h1>
+          <p>
+            Page you are looking for probably does not exist or no longer here.
+          </p>
+        </div>
+        <div class="is-hidden-mobile" style="height: 10vh;"></div>
+      </main>
+    </div>
+    <Footer />
+  </body>
+</html>

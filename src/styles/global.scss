@@ -1,0 +1,60 @@
+@charset "utf-8";
+@import "./nunito.scss";
+
+$primary: #89375F;
+$link: #89375F;
+$light:#FFF3E4;
+$dark:#4F4557;
+$text: #393646;
+$white: #FFF3E4;
+$grey: #E4DCCF;
+
+$body-background-color: #FFF3E4;
+$hr-background-color: $grey;
+$hr-height: 1px;
+
+$family-sans-serif: "Nunito", sans-serif;
+$family-primary: $family-sans-serif;
+
+$code: $text;
+$code-background: $grey;
+
+$card-shadow: none;
+
+@import "bulma/bulma.sass";
+
+.main-section {
+	margin: 0 1rem;
+}
+
+.main-content {
+	padding: 2rem 0;
+	margin: 1rem auto;
+}
+
+.navbar-container {
+	border-bottom: 1px solid $grey;
+}
+
+.footer-container {
+	border-top: 1px solid $grey;
+}
+
+code, pre, img {
+	border-radius: .3rem;
+}
+
+.content blockquote {
+	border-left: 4px solid $link;
+	background-color: $grey;
+}
+
+.content table {
+	td, th {
+		border-color: $grey;
+	}
+}
+
+.card {
+	border: 1px solid $grey;
+}

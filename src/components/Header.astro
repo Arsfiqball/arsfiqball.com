@@ -1,25 +1,124 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import { SITE_TITLE } from "../consts";
+import { Icon } from "astro-icon";
 ---
 
-<header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
-	</nav>
-</header>
-<style>
-	header {
-		margin: 0em 0 2em;
-	}
-	h2 {
-		margin: 0.5em 0;
-	}
-</style>
+<nav class="navbar is-fixed-top has-background-white" role="navigation" aria-label="main navigation">
+  <div class="container is-max-desktop navbar-container">
+    <div class="navbar-brand">
+      <a
+        class="navbar-item"
+        style="padding: 0 .75rem; line-height: 0;"
+        href="/"
+      >
+        <img src="/iqbal.png" style="height: 2.25rem; max-height: 2.5rem;" />
+      </a>
+      <a class="navbar-item" href="/notebook">
+        <span class="icon-text">
+          <span class="icon">
+            <Icon name="ph:notebook" />
+          </span>
+          <span class="is-hidden-mobile">Notebook</span>
+        </span>
+      </a>
+      <a class="navbar-item" href="/laboratory">
+        <span class="icon-text">
+          <span class="icon">
+            <Icon name="ph:rocket" />
+          </span>
+          <span class="is-hidden-mobile">Laboratory</span>
+        </span>
+      </a>
+      <a class="navbar-item" href="/about-me">
+        <span class="icon-text">
+          <span class="icon">
+            <Icon name="ph:user-circle" />
+          </span>
+          <span class="is-hidden-mobile">About Me</span>
+        </span>
+      </a>
+
+      <a
+        role="button"
+        class="navbar-burger"
+        aria-label="menu"
+        aria-expanded="false"
+        data-target="navigation-menu"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navigation-menu" class="navbar-menu">
+      <div class="navbar-start">
+        <!-- Nothing yet -->
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-light" href="https://github.com/Arsfiqball/">
+              <span class="icon">
+                <Icon name="ph:github-logo" />
+              </span>
+            </a>
+            <a class="button is-light" href="https://gitlab.com/arsfiqball">
+              <span class="icon">
+                <Icon name="ph:gitlab-logo" />
+              </span>
+            </a>
+            <a class="button is-light" href="https://t.me/arsfiqball">
+              <span class="icon">
+                <Icon name="ph:telegram-logo" />
+              </span>
+            </a>
+            <a class="button is-light" href="https://www.linkedin.com/in/arsfiqball/">
+              <span class="icon">
+                <Icon name="ph:linkedin-logo" />
+              </span>
+            </a>
+            <a class="button is-light" href="https://twitter.com/arsfiqball">
+              <span class="icon">
+                <Icon name="ph:twitter-logo" />
+              </span>
+            </a>
+            <a class="button is-light" href="https://www.instagram.com/arsfiqball/">
+              <span class="icon">
+                <Icon name="ph:instagram-logo" />
+              </span>
+            </a>
+            <a class="button is-light" href="mailto:me@arsfiqball.com">
+              <span class="icon">
+                <Icon name="ph:envelope" />
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(
+      document.querySelectorAll(".navbar-burger"),
+      0
+    );
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach((el) => {
+      el.addEventListener("click", () => {
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle("is-active");
+        $target?.classList.toggle("is-active");
+      });
+    });
+  });
+</script>
