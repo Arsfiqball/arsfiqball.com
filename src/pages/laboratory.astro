@@ -19,10 +19,6 @@ const projects = (await getCollection("project")).sort(
     <Header title="Laboratory" />
     <div class="main-section">
       <main class="container is-max-desktop main-content">
-        <div class="content">
-          <blockquote>Page Under Development</blockquote>
-        </div>
-
         <div class="columns is-multiline">
           {
             projects.map((project) => (
@@ -30,11 +26,17 @@ const projects = (await getCollection("project")).sort(
                 <div class="column is-6">
                   <div class="card">
                     <div class="card-content">
-                      <a href={project.data.link} target="_blank" class="icon is-pulled-right">
+                      <a
+                        href={project.data.link}
+                        target="_blank"
+                        class="icon is-pulled-right"
+                      >
                         <Icon name="ph:arrow-square-out" />
                       </a>
                       <p class="title is-4">{project.data.title}</p>
-                      <p class="subtitle is-7">{project.data.description}</p>
+                      <p class="subtitle is-7 description">
+                        {project.data.description}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -45,5 +47,12 @@ const projects = (await getCollection("project")).sort(
       </main>
     </div>
     <Footer />
+    <style>
+      .description {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis " ...";
+      }
+    </style>
   </body>
 </html>

@@ -1,9 +1,16 @@
 ---
 import { SITE_TITLE } from "../consts";
 import { Icon } from "astro-icon";
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+const rootDir = currentPath.split("/")[0];
 ---
 
-<nav class="navbar is-fixed-top has-background-white" role="navigation" aria-label="main navigation">
+<nav
+  class="navbar is-fixed-top has-background-white"
+  role="navigation"
+  aria-label="main navigation"
+>
   <div class="container is-max-desktop navbar-container">
     <div class="navbar-brand">
       <a
@@ -13,7 +20,13 @@ import { Icon } from "astro-icon";
       >
         <img src="/iqbal.png" style="height: 2.25rem; max-height: 2.5rem;" />
       </a>
-      <a class="navbar-item" href="/notebook">
+      <a
+        class:list={[
+          "navbar-item is-tab",
+          rootDir == "notebook" ? " is-active" : "",
+        ]}
+        href="/notebook"
+      >
         <span class="icon-text">
           <span class="icon">
             <Icon name="ph:notebook" />
@@ -21,7 +34,13 @@ import { Icon } from "astro-icon";
           <span class="is-hidden-mobile">Notebook</span>
         </span>
       </a>
-      <a class="navbar-item" href="/laboratory">
+      <a
+        class:list={[
+          "navbar-item is-tab",
+          rootDir == "laboratory" ? " is-active" : "",
+        ]}
+        href="/laboratory"
+      >
         <span class="icon-text">
           <span class="icon">
             <Icon name="ph:rocket" />
@@ -29,7 +48,13 @@ import { Icon } from "astro-icon";
           <span class="is-hidden-mobile">Laboratory</span>
         </span>
       </a>
-      <a class="navbar-item" href="/about-me">
+      <a
+        class:list={[
+          "navbar-item is-tab",
+          rootDir == "about-me" ? " is-active" : "",
+        ]}
+        href="/about-me"
+      >
         <span class="icon-text">
           <span class="icon">
             <Icon name="ph:user-circle" />
@@ -74,7 +99,10 @@ import { Icon } from "astro-icon";
                 <Icon name="ph:telegram-logo" />
               </span>
             </a>
-            <a class="button is-light" href="https://www.linkedin.com/in/arsfiqball/">
+            <a
+              class="button is-light"
+              href="https://www.linkedin.com/in/arsfiqball/"
+            >
               <span class="icon">
                 <Icon name="ph:linkedin-logo" />
               </span>
@@ -84,7 +112,10 @@ import { Icon } from "astro-icon";
                 <Icon name="ph:twitter-logo" />
               </span>
             </a>
-            <a class="button is-light" href="https://www.instagram.com/arsfiqball/">
+            <a
+              class="button is-light"
+              href="https://www.instagram.com/arsfiqball/"
+            >
               <span class="icon">
                 <Icon name="ph:instagram-logo" />
               </span>
