@@ -19,22 +19,26 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     <Header />
     <main class="main-section">
       <article class="container is-max-desktop main-content">
-        <h1 class="title">{title}</h1>
-        <span class="subtitle is-6">
-          <FormattedDate date={pubDate} />
-        </span>
-        {
-          updatedDate && (
-            <div class="last-updated-on">
-              Last updated on <FormattedDate date={updatedDate} />
+        <div class="columns is-desktop">
+          <div class="column is-10 is-offset-1">
+            <h1 class="title">{title}</h1>
+            <span class="subtitle is-6">
+              <FormattedDate date={pubDate} />
+            </span>
+            {
+              updatedDate && (
+                <div class="last-updated-on has-text-centered">
+                  Last updated on <FormattedDate date={updatedDate} />
+                </div>
+              )
+            }
+            <hr />
+            <div class="content">
+              <slot />
             </div>
-          )
-        }
-        <hr />
-        <div class="content">
-          <slot />
+          </article>
         </div>
-      </article>
+      </div>
     </main>
     <Footer />
   </body>
